@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipbook2</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	 
+<div class="flipbook-container">
+  <!-- Left arrow for page flip -->
+    <div id="left-arrow" class="arrow">
+        <img src="./img/left-arrow.png" alt="Left Arrow">
+    </div>
+  <div id="flipbook">
+    
+	<!-- Page 1 -->
+        <div class="page">
+            <div class="content">
+                <div class="division">
+			<a href="https://www.youtube.com/watch?v=gI6FEYKnQJY" target="_blank" >
+                        <img src="img/PK400-700PDFPDF.png" alt="Image 1">
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+
+  
+
+
+
+       <!-- Page 2 -->
+        <div class="page">
+            <div class="content">
+                <div class="division">
+			<a href="https://www.youtube.com/watch?v=gI6FEYKnQJY" target="_blank" >
+                        <img src="img/MT400-700.png" alt="Image 1">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+		
+
+
+<!-- Page 3 -->
+        <div class="page">
+            <div class="content">
+                <div class="division">
+                        <img src="img/MTMESSGAEGE400-700.png" alt="Example Image"  />
+                    
+                </div>
+            </div>
+        </div>
+	     
+<!-- Page 4 -->
+        <div class="page">
+            <div class="content">
+                <div class="division">
+                        <img src="img/BTechMessage400-700.png" alt="Example Image"  />
+                    
+                </div>
+            </div>
+        </div>
+       
+
+  </div>
+
+<!-- Right arrow for page flip -->
+    	<div id="right-arrow" class="arrow">
+        	<img src="./img/right-arrow.png" alt="Right Arrow">
+    	</div>
+
+     <audio id="page-turn-sound" src="./img/pageflip.mp3" preload="auto"></audio>
+</div>
+<!-- At the bottom before body -->
+
+<script src="./js/turn.min.js"></script>
+<script src="./js/script.js"></script>
+
+
+
+
+
+<!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- Video will be loaded here dynamically -->
+            <iframe id="youtubeVideo" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+
+
+ <!-- JavaScript for Modal -->
+    <script>
+        function openModal(videoUrl) {
+            document.getElementById('youtubeVideo').src = videoUrl; // Set the iframe src
+            document.getElementById('myModal').style.display = "block"; // Show the modal
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none"; // Hide the modal
+            document.getElementById('youtubeVideo').src = ""; // Stop the video
+        }
+
+        // Close the modal if user clicks outside of it
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+
+  <!-- End of JavaScript for Modal -->
+
+</body>
+
+</html>
