@@ -76,6 +76,22 @@ html, body {
     height: 100%;
 }
 
+/* Overlay message for landscape orientation */
+.landscape-warning {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000cc;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 9999;
+  padding: 2rem;
+  box-sizing: border-box;
+}
 
 
 
